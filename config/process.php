@@ -97,7 +97,7 @@
     $CodCliente;
 
     if(!empty($_GET)) {
-      $CodCliente = $_GET["CodCliente"];
+      $CodCliente = $_GET["id"];
     }
 
     // Retorna o dado de um contato
