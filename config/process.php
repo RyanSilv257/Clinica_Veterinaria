@@ -16,14 +16,21 @@
       $Nome = $data["Nome"];
       $Endereco = $data["Endereco"];
       $Telefone = $data["Telefone"];
+      $Celular = $data["Celular"];
+      $CPF = $data["CPF"];
 
-      $query = "INSERT INTO cliente (Nome, Endereco, Telefone) VALUES (:Nome, :Endereco, :Telefone)";
+
+      $query = "INSERT INTO cliente (Nome, Endereco, Telefone, Celular, CPF) VALUES (:Nome, :Endereco, :Telefone, :Celular, :CPF)";
 
       $stmt = $conn->prepare($query);
 
       $stmt->bindParam(":Nome", $Nome);
       $stmt->bindParam(":Endereco", $Endereco);
       $stmt->bindParam(":Telefone", $Telefone);
+
+      $stmt->bindParam(":Celular", $Celular);
+      $stmt->bindParam(":CPF", $CPf);
+
 
       try {
 
@@ -41,6 +48,9 @@
       $Nome = $data["Nome"];
       $Endereco = $data["Endereco"];
       $Telefone = $data["Telefone"];
+      $Telefone = $data["Celular"];
+      $Telefone = $data["CPF"];
+
       $CodCliente = $data["CodCliente"];
 
       $query = "UPDATE Cliente 
